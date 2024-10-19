@@ -5,14 +5,14 @@
   "author": "xdite",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel ./index.html",
-    "build": "parcel build --public-url . --no-source-maps index.html"
+    "dev": "esbuild index.ts --bundle --outfile=dist/index.js --format=iife --watch",
+    "build": "esbuild index.ts --bundle --outfile=dist/index.js --format=iife --minify"
   },
   "devDependencies": {
     "@logseq/libs": "^0.0.17",
     "@types/uuid": "^9.0.1",
-    "buffer": "^5.5.0||^6.0.0",
-    "parcel": "2.9.3"
+    "esbuild": "^0.17.19",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "uuid": "^9.0.0"
