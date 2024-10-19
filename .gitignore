@@ -1,0 +1,5 @@
+# 添加以下行
+.env
+node_modules
+.parcel-cache/
+dist/

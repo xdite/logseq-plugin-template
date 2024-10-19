@@ -1,0 +1,24 @@
+{
+  "name": "logseq-plugin-template",
+  "version": "0.0.1",
+  "description": "Logseq Plugin Template",
+  "author": "xdite",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build --public-url . --no-source-maps index.html"
+  },
+  "devDependencies": {
+    "@logseq/libs": "^0.0.17",
+    "@types/uuid": "^9.0.1",
+    "buffer": "^5.5.0||^6.0.0",
+    "parcel": "2.9.3"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "logseq": {
+    "main": "dist/index.html",
+    "id": "logseq-plugin-template"
+  }
+}
