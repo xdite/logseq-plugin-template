@@ -4,21 +4,33 @@
   "description": "Logseq Plugin Template",
   "author": "xdite",
   "license": "MIT",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "esbuild index.ts --bundle --outfile=dist/index.js --format=iife --watch",
-    "build": "esbuild index.ts --bundle --outfile=dist/index.js --format=iife --minify"
+    "dev": "vite build --watch",
+    "build": "tsc && NODE_ENV=production vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@logseq/libs": "^0.0.17",
-    "@types/uuid": "^9.0.1",
-    "esbuild": "^0.17.19",
-    "typescript": "^4.9.5"
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.0.0",
+    "vite": "^5.4.9"
   },
   "dependencies": {
-    "uuid": "^9.0.0"
+    "@anthropic-ai/sdk": "^0.29.2",
+    "@logseq/libs": "^0.0.17",
+    "openai": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "uuid": "^10.0.0"
   },
   "logseq": {
-    "main": "dist/index.html",
-    "id": "logseq-plugin-template"
+    "id": "logseq-plugin-template",
+    "main": "dist/index.js"
   }
 }
