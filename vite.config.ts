@@ -22,7 +22,7 @@ export default defineConfig({
     lib: {
       entry: 'src/index.tsx',
       formats: ['iife'],
-      name: 'LogseqChatPlugin',
+      name: 'LogseqPluginTemplate',
       fileName: () => 'index.js',
     },
     rollupOptions: {
