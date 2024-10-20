@@ -8,6 +8,8 @@
 - TypeScript 支持
 - React 集成
 - 預配置的構建流程
+- 格式化答案的工具函數
+- 特殊塊（如 Mermaid、Graphviz）的渲染支持
 
 ## 快速開始
 
@@ -31,9 +33,32 @@
 
 這個模板使用 TypeScript 和 React。主要的入口點是 `src/index.tsx`。
 
+### 主要功能
+
+- `formatAnswer`: 這個函數位於 `src/util.ts`，用於格式化文本答案。它可以處理特殊塊（如 Mermaid、Graphviz），數學公式，以及標準的 Markdown 格式。
+
+### 特殊塊支持
+
+這個模板支持以下特殊塊的渲染：
+- Mermaid
+- Viz
+- Graphviz (包括 DOT 語法)
+
+你可以在插件設置中自定義支持的特殊標籤。
+
 ### 構建
 
 要構建插件，運行：
+
+```
+yarn build
+```
+
+這將在 `dist` 目錄中生成生產就緒的文件。
+
+## 貢獻
+
+歡迎提交 Issues 和 Pull Requests 來幫助改進這個插件模板！
 
 ## 許可證
 
