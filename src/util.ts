@@ -1,9 +1,11 @@
+import { BlockEntity, PageEntity } from '@logseq/libs/dist/LSPlugin';
 import { v4 as uuidv4 } from 'uuid';
 
+// 定義 FormattedBlock 介面
 interface FormattedBlock {
-  content: string;
-  indent: number;
-  children: FormattedBlock[];
+    content: string;
+    indent: number;
+    children: FormattedBlock[];
 }
 
 // 新增的 formatAnswer 函數
@@ -155,18 +157,4 @@ export function formatAnswer(answer: string): FormattedBlock[] {
 
     console.log("Formatted blocks:", formattedBlocks);
     return formattedBlocks
-}
-
-export const createKanbanBoard = () => {
-    // ... (other code)
-
-    const newColumns = defaultColumns.map((column) => {
-        return {
-            id: uuidv4(),  // Use uuidv4() directly here
-            name: column,
-            tasks: []
-        }
-    })
-
-    // ... (rest of the function)
 }
